@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CorrectScherm.iml" filepath="$PROJECT_DIR$/CorrectScherm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cooldownApp.iml" filepath="$PROJECT_DIR$/cooldownApp.iml" />
     </modules>
   </component>
 </project>
