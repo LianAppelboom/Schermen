@@ -12,14 +12,28 @@
             <BorderPane prefHeight="200.0" prefWidth="7.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="0.0" />
             <BorderPane prefHeight="7.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" />
             <BorderPane layoutX="591.0" prefHeight="200.0" prefWidth="7.0" style="-fx-background-color: #FFFFFF;" />
-            <TextField alignment="CENTER" layoutX="62.0" layoutY="98.0" prefHeight="54.0" prefWidth="238.0" style="-fx-background-color: #ECECEC;" text="Gewenste Temperatuur">
+            <TextField alignment="CENTER" layoutX="62.0" layoutY="98.0" prefHeight="54.0" prefWidth="238.0" style="-fx-background-color: #ECECEC; -fx-border-color: #C1C1C1;" text="Gewenste Temperatuur">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </TextField>
             <Button layoutX="513.0" layoutY="17.0" mnemonicParsing="false" style="-fx-background-image: C:\Users\liana\IdeaProjects\CorrectScherm\src\image;" text="Uitloggen" />
             <Button layoutX="427.0" layoutY="17.0" mnemonicParsing="false" text="Instellingen" />
-            <ChoiceBox layoutX="330.0" layoutY="98.0" prefHeight="54.0" prefWidth="69.0" />
+            <Button layoutX="405.0" layoutY="95.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="+">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="405.0" layoutY="125.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="-">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <TextField alignment="CENTER" layoutX="322.0" layoutY="98.0" prefHeight="54.0" prefWidth="69.0" style="-fx-background-color: #ECECEC; -fx-border-color: #C1C1C1;" text="2°C">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
          </children></AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #FFFFFF;">
          <children>
@@ -36,12 +50,12 @@
                   <Image url="@../image/logo.jpg" />
                </image>
             </ImageView>
-            <TextField alignment="CENTER" layoutX="62.0" layoutY="44.0" prefHeight="54.0" prefWidth="238.0" style="-fx-background-color: #ECECEC;" text="Actuele Temperatuur">
+            <TextField alignment="CENTER" layoutX="62.0" layoutY="44.0" prefHeight="54.0" prefWidth="238.0" style="-fx-background-color: #ECECEC; -fx-border-color: #C1C1C1;" text="Actuele Temperatuur">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </TextField>
-            <TextField alignment="CENTER" layoutX="330.0" layoutY="44.0" prefHeight="54.0" prefWidth="69.0" style="-fx-background-color: #ECECEC;" text="4°C">
+            <TextField alignment="CENTER" layoutX="322.0" layoutY="44.0" prefHeight="54.0" prefWidth="69.0" style="-fx-background-color: #ECECEC; -fx-border-color: #C1C1C1;" text="4°C">
                <font>
                   <Font size="20.0" />
                </font>
