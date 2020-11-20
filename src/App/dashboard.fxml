@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #5DFFAE;">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="7.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="0.0" />
+            <BorderPane prefHeight="7.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" />
+            <BorderPane layoutX="591.0" prefHeight="200.0" prefWidth="7.0" style="-fx-background-color: #FFFFFF;" />
+            <TextField alignment="CENTER" layoutX="62.0" layoutY="98.0" prefHeight="54.0" prefWidth="238.0" style="-fx-background-color: #ECECEC;" text="Gewenste Temperatuur">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </TextField>
+            <Button layoutX="513.0" layoutY="17.0" mnemonicParsing="false" style="-fx-background-image: C:\Users\liana\IdeaProjects\CorrectScherm\src\image;" text="Uitloggen" />
+            <Button layoutX="427.0" layoutY="17.0" mnemonicParsing="false" text="Instellingen" />
+            <ChoiceBox layoutX="330.0" layoutY="98.0" prefHeight="54.0" prefWidth="69.0" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="7.0" style="-fx-background-color: #5DFFAE;" />
+            <BorderPane layoutY="189.0" prefHeight="7.0" prefWidth="600.0" style="-fx-background-color: #5DFFAE;" />
+            <BorderPane layoutX="591.0" prefHeight="200.0" prefWidth="7.0" style="-fx-background-color: #5DFFAE;" />
+            <TextField layoutX="475.0" layoutY="146.0" prefHeight="44.0" prefWidth="81.0" style="-fx-background-color: #5DFFAE;" text="Cooldown UI">
+               <font>
+                  <Font name="Impact" size="12.0" />
+               </font>
+            </TextField>
+            <ImageView fitHeight="48.0" fitWidth="44.0" layoutX="547.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/logo.jpg" />
+               </image>
+            </ImageView>
+            <TextField alignment="CENTER" layoutX="62.0" layoutY="44.0" prefHeight="54.0" prefWidth="238.0" style="-fx-background-color: #ECECEC;" text="Actuele Temperatuur">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="330.0" layoutY="44.0" prefHeight="54.0" prefWidth="69.0" style="-fx-background-color: #ECECEC;" text="4°C">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
