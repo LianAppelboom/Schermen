@@ -9,78 +9,85 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.Controller">
-  <items>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #5DFFAE;">
-         <children>
-            <BorderPane prefHeight="200.0" prefWidth="7.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="0.0" />
-            <BorderPane prefHeight="7.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" />
-            <BorderPane layoutX="591.0" prefHeight="200.0" prefWidth="7.0" style="-fx-background-color: #FFFFFF;" />
-            <Button layoutX="483.0" layoutY="15.0" mnemonicParsing="false" style="-fx-background-color: transparant; -fx-border-width: 2px 2px 2px 2px; -fx-border-color: #0598FF; -fx-border-radius: 50%;" text="Uitloggen">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font></Button>
-            <Button layoutX="401.0" layoutY="85.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 50%; -fx-background-color: green;" text="+">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-            </Button>
-            <Button layoutX="401.0" layoutY="131.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 50%; -fx-background-color: red;" text="-">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-            </Button>
-            <TextField alignment="CENTER" layoutX="316.0" layoutY="98.0" prefHeight="54.0" prefWidth="69.0" style="-fx-background-color: #ECECEC; -fx-border-color: #C1C1C1; -fx-border-radius: 5;" text="2°C">
-               <font>
-                  <Font name="Impact" size="24.0" />
-               </font>
-            </TextField>
-            <Button layoutX="560.0" layoutY="17.0" mnemonicParsing="false" onAction="#exit" style="-fx-background-color: transaparnt;" text="X" textFill="RED">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Button>
-            <Button layoutX="388.0" layoutY="15.0" mnemonicParsing="false" style="-fx-background-color: transparant; -fx-border-width: 2px 2px 2px 2px; -fx-border-color: #0598FF; -fx-border-radius: 50%;" text="Instellingen">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Button>
-            <TextField alignment="CENTER" editable="false" layoutX="33.0" layoutY="98.0" prefHeight="54.0" prefWidth="267.0" style="-fx-background-color: #ECECEC; -fx-border-color: #C1C1C1; -fx-border-radius: 5;" text="Gewenste temperatuur">
-               <font>
-                  <Font name="Impact" size="24.0" />
-               </font>
-            </TextField>
-         </children></AnchorPane>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #FFFFFF;">
-         <children>
-            <BorderPane prefHeight="200.0" prefWidth="7.0" style="-fx-background-color: #5DFFAE;" />
-            <BorderPane layoutY="189.0" prefHeight="7.0" prefWidth="600.0" style="-fx-background-color: #5DFFAE;" />
-            <BorderPane layoutX="591.0" prefHeight="200.0" prefWidth="7.0" style="-fx-background-color: #5DFFAE;" />
-            <TextField layoutX="475.0" layoutY="146.0" prefHeight="44.0" prefWidth="81.0" style="-fx-background-color: #5DFFAE;" text="Cooldown UI">
-               <font>
-                  <Font name="Impact" size="12.0" />
-               </font>
-            </TextField>
-            <ImageView fitHeight="48.0" fitWidth="44.0" layoutX="547.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../image/logo.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="139.0" fitWidth="190.0" layoutX="265.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../image/circle2.jpg" />
-               </image>
-            </ImageView>
-            <TextField alignment="CENTER" layoutX="300.0" layoutY="48.0" prefHeight="85.0" prefWidth="89.0" style="-fx-background-color: transparant;" text="4°C">
-               <font>
-                  <Font name="Impact" size="24.0" />
-               </font>
-            </TextField>
-            <TextField alignment="CENTER" editable="false" layoutX="33.0" layoutY="63.0" prefHeight="54.0" prefWidth="267.0" style="-fx-background-color: #ECECEC; -fx-border-color: #C1C1C1; -fx-border-radius: 5;" text="Actuele Temperatuur">
-               <font>
-                  <Font name="Impact" size="24.0" />
-               </font>
-            </TextField>
-         </children></AnchorPane>
-  </items>
-</SplitPane>
+<BorderPane fx:id="borderPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.Dashboard">
+   <center>
+      <SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="500.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #5DFFAE;">
+               <children>
+                  <BorderPane prefHeight="250.0" prefWidth="7.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="0.0" />
+                  <BorderPane prefHeight="7.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF;" />
+                  <BorderPane layoutX="692.0" prefHeight="250.0" prefWidth="7.0" style="-fx-background-color: #FFFFFF;" />
+                  <Button layoutX="574.0" layoutY="12.0" mnemonicParsing="false" onAction="#loginRedirect" style="-fx-background-color: transparant; -fx-border-width: 2px 2px 2px 2px; -fx-border-color: #0598FF; -fx-border-radius: 50%;" text="Uitloggen" textFill="#545454">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="535.0" layoutY="93.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 50%; -fx-background-color: green;" text="+" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="535.0" layoutY="147.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 50%; -fx-background-color: red;" text="-" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <TextField alignment="CENTER" editable="false" layoutX="437.0" layoutY="108.0" prefHeight="54.0" prefWidth="69.0" style="-fx-background-color: #ECECEC; -fx-border-color: #C1C1C1; -fx-border-radius: 5;" text="2°C">
+                     <font>
+                        <Font name="Impact" size="24.0" />
+                     </font>
+                  </TextField>
+                  <Button layoutX="660.0" layoutY="14.0" mnemonicParsing="false" onAction="#exit" style="-fx-background-color: transaparnt;" text="X" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="478.0" layoutY="12.0" mnemonicParsing="false" style="-fx-background-color: transparant; -fx-border-width: 2px 2px 2px 2px; -fx-border-color: #0598FF; -fx-border-radius: 50%;" text="Instellingen" textFill="#545454">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <TextField alignment="CENTER" editable="false" layoutX="44.0" layoutY="108.0" prefHeight="54.0" prefWidth="345.0" style="-fx-background-color: #ECECEC; -fx-border-color: #C1C1C1; -fx-border-radius: 5;" text="Gewenste temperatuur">
+                     <font>
+                        <Font name="Impact" size="24.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <BorderPane prefHeight="250.0" prefWidth="7.0" style="-fx-background-color: #5DFFAE;" />
+                  <BorderPane layoutY="241.0" prefHeight="7.0" prefWidth="700.0" style="-fx-background-color: #5DFFAE;" />
+                  <BorderPane layoutX="692.0" prefHeight="250.0" prefWidth="7.0" style="-fx-background-color: #5DFFAE;" />
+                  <TextField layoutX="575.0" layoutY="197.0" prefHeight="44.0" prefWidth="81.0" style="-fx-background-color: #5DFFAE;" text="Cooldown UI">
+                     <font>
+                        <Font name="Impact" size="12.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="48.0" fitWidth="44.0" layoutX="650.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/logo.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="139.0" fitWidth="190.0" layoutX="389.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/circle2.jpg" />
+                     </image>
+                  </ImageView>
+                  <TextField alignment="CENTER" editable="false" layoutX="437.0" layoutY="68.0" prefHeight="85.0" prefWidth="89.0" style="-fx-background-color: transparant;" text="4°C">
+                     <font>
+                        <Font name="Impact" size="24.0" />
+                     </font>
+                  </TextField>
+                  <TextField alignment="CENTER" editable="false" layoutX="44.0" layoutY="84.0" prefHeight="54.0" prefWidth="345.0" style="-fx-background-color: #ECECEC; -fx-border-color: #C1C1C1; -fx-border-radius: 5;" text="Actuele Temperatuur">
+                     <font>
+                        <Font name="Impact" size="24.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>

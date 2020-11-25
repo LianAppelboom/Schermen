@@ -1,5 +1,6 @@
 package App;
 
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,8 +10,7 @@ import javafx.scene.layout.BorderPane;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Dashboard implements Initializable {
-
+public class registratieForm implements Initializable {
     @FXML
     private BorderPane borderPane;
 

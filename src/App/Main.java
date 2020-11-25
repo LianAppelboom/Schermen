@@ -10,9 +10,6 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 
-
-import java.awt.*;
-
 public class Main extends Application {
 
     private double xOffset = 0;
