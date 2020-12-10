@@ -40,14 +40,14 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <TextField layoutX="60.0" layoutY="192.0" prefHeight="27.0" prefWidth="251.0" promptText="Username" style="-fx-background-color: transparant; -fx-border-color: #5DFFAE; -fx-border-width: 0px 0px 2px 0px;" />
-            <PasswordField layoutX="61.0" layoutY="237.0" prefHeight="27.0" prefWidth="251.0" promptText="Password" style="-fx-background-color: transparant; -fx-border-color: #5DFFAE; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="loginTextField" layoutX="60.0" layoutY="192.0" prefHeight="27.0" prefWidth="251.0" promptText="Username" style="-fx-background-color: transparant; -fx-border-color: #5DFFAE; -fx-border-width: 0px 0px 2px 0px;" />
+            <PasswordField fx:id="passwordTextField" layoutX="61.0" layoutY="237.0" prefHeight="27.0" prefWidth="251.0" promptText="Password" style="-fx-background-color: transparant; -fx-border-color: #5DFFAE; -fx-border-width: 0px 0px 2px 0px;" />
             <Text fill="#545454" layoutX="24.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome back" textAlignment="CENTER">
                <font>
                   <Font name="Impact" size="24.0" />
                </font>
             </Text>
-            <Button layoutX="60.0" layoutY="319.0" mnemonicParsing="false" onAction="#dashBoardRedirect" prefHeight="38.0" prefWidth="251.0" style="-fx-background-color: #5DFFAE; -fx-border-width: 0px 0px 2px 0px;" text="Login" />
+            <Button layoutX="60.0" layoutY="319.0" mnemonicParsing="false" onAction="#validateLogin" prefHeight="38.0" prefWidth="251.0" style="-fx-background-color: #5DFFAE; -fx-border-width: 0px 0px 2px 0px;" text="Login" />
             <Hyperlink layoutX="175.0" layoutY="466.0" onAction="#registratieRedirect" text="Signup">
                <font>
                   <Font name="System Bold" size="12.0" />
@@ -69,6 +69,11 @@
                   <Image url="@../image/logo2.jpg" />
                </image>
             </ImageView>
+            <Text fx:id="loginMessageLabel" fill="RED" layoutX="78.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="215.25">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
    </right>
