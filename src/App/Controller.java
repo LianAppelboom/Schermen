@@ -41,7 +41,7 @@ public class Controller implements Initializable {
         DatabaseConnection connectNow = new DatabaseConnection();
         Connection connectionDB = connectNow.getConnection();
 
-        String verifyLogin = "SELECT count(1) FROM cooldown.user where email = '" + loginTextField.getText() + "' AND password = '" + passwordTextField.getText() + "'";
+        String verifyLogin = "SELECT count(1) FROM cooldown.gebruiker where emailadres = '" + loginTextField.getText() + "' AND wachtwoord = '" + passwordTextField.getText() + "'";
         try {
             Statement statement = connectionDB.createStatement();
             ResultSet queryResult = statement.executeQuery(verifyLogin);
@@ -49,6 +49,27 @@ public class Controller implements Initializable {
             while (queryResult.next()) {
                 if (queryResult.getInt(1) == 1) {
                     System.out.println(verifyLogin);
+                    dashBoardRedirect();
+                } else {
+                    validateLoginBeheerder();
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            e.getCause();
+        }
+    }
+
+    public void validateLoginBeheerder() {      //Beheerder Validation
+        DatabaseConnection connectNow = new DatabaseConnection();
+        Connection connectionDB = connectNow.getConnection();
+
+        String verifyLoginB = "SELECT count(1) FROM cooldown.beheerder where emailadres = '" + loginTextField.getText() + "' AND wachtwoord = '" + passwordTextField.getText() + "'";
+        try {
+            Statement statement = connectionDB.createStatement();
+            ResultSet queryResultB = statement.executeQuery(verifyLoginB);
+            while (queryResultB.next()) {
+                if (queryResultB.getInt(1) == 1) {
                     dashBoardRedirect();
                 } else {
                     loginMessageLabel.setText("Invalid login! Please try again");
@@ -59,6 +80,7 @@ public class Controller implements Initializable {
             e.getCause();
         }
     }
+
 
     private void dashBoardRedirect() throws Exception {
         BorderPane root = FXMLLoader.load(getClass().getResource("dashboard.fxml"));

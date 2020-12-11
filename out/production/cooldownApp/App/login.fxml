@@ -11,70 +11,88 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: transparant;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.Controller">
-   <left>
-      <AnchorPane prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: #5DFFAE;" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="220.0" fitWidth="329.0" layoutX="65.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../image/logo.jpg" />
-               </image>
-            </ImageView>
-            <Text layoutX="72.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cooldown UI" textAlignment="CENTER" wrappingWidth="206.015625">
-               <font>
-                  <Font name="Impact" size="24.0" />
-               </font>
-            </Text>
-            <Text layoutX="73.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome To" textAlignment="CENTER" wrappingWidth="203.25">
-               <font>
-                  <Font name="Ebrima Bold" size="13.0" />
-               </font>
-            </Text>
-         </children></AnchorPane>
-   </left>
-   <right>
-      <AnchorPane prefHeight="500.0" prefWidth="350.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button layoutX="312.0" layoutY="14.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="17.0" style="-fx-background-color: transparant;" text="X" textFill="RED">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Button>
-            <TextField fx:id="loginTextField" layoutX="60.0" layoutY="192.0" prefHeight="27.0" prefWidth="251.0" promptText="Username" style="-fx-background-color: transparant; -fx-border-color: #5DFFAE; -fx-border-width: 0px 0px 2px 0px;" />
-            <PasswordField fx:id="passwordTextField" layoutX="61.0" layoutY="237.0" prefHeight="27.0" prefWidth="251.0" promptText="Password" style="-fx-background-color: transparant; -fx-border-color: #5DFFAE; -fx-border-width: 0px 0px 2px 0px;" />
-            <Text fill="#545454" layoutX="24.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome back" textAlignment="CENTER">
-               <font>
-                  <Font name="Impact" size="24.0" />
-               </font>
-            </Text>
-            <Button layoutX="60.0" layoutY="319.0" mnemonicParsing="false" onAction="#validateLogin" prefHeight="38.0" prefWidth="251.0" style="-fx-background-color: #5DFFAE; -fx-border-width: 0px 0px 2px 0px;" text="Login" />
-            <Hyperlink layoutX="175.0" layoutY="466.0" onAction="#registratieRedirect" text="Signup">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Hyperlink>
-            <Text fill="#a3a3a3" layoutX="105.0" layoutY="482.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No account?">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Text>
-            <Hyperlink layoutX="175.0" layoutY="274.0" text="Forgot Your Password? " />
-            <Text fill="#a3a3a3" layoutX="24.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign in to continue" textAlignment="CENTER">
-               <font>
-                  <Font name="Arial" size="12.0" />
-               </font>
-            </Text>
-            <ImageView fitHeight="73.0" fitWidth="79.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../image/logo2.jpg" />
-               </image>
-            </ImageView>
-            <Text fx:id="loginMessageLabel" fill="RED" layoutX="78.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="215.25">
-               <font>
-                  <Font name="Arial Bold" size="13.0" />
-               </font>
-            </Text>
-         </children>
-      </AnchorPane>
-   </right>
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: transparant;"
+            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.Controller">
+    <left>
+        <AnchorPane prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: #5DFFAE;"
+                    BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="220.0" fitWidth="329.0" layoutX="65.0" layoutY="97.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../image/logo.jpg"/>
+                    </image>
+                </ImageView>
+                <Text layoutX="72.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cooldown UI"
+                      textAlignment="CENTER" wrappingWidth="206.015625">
+                    <font>
+                        <Font name="Impact" size="24.0"/>
+                    </font>
+                </Text>
+                <Text layoutX="73.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome To"
+                      textAlignment="CENTER" wrappingWidth="203.25">
+                    <font>
+                        <Font name="Ebrima Bold" size="13.0"/>
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <AnchorPane prefHeight="500.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button layoutX="312.0" layoutY="14.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0"
+                        prefWidth="17.0" style="-fx-background-color: transparant;" text="X" textFill="RED">
+                    <font>
+                        <Font name="System Bold" size="12.0"/>
+                    </font>
+                </Button>
+                <TextField fx:id="loginTextField" layoutX="60.0" layoutY="192.0" prefHeight="27.0" prefWidth="251.0"
+                           promptText="Username"
+                           style="-fx-background-color: transparant; -fx-border-color: #5DFFAE; -fx-border-width: 0px 0px 2px 0px;"/>
+                <PasswordField fx:id="passwordTextField" layoutX="61.0" layoutY="237.0" prefHeight="27.0"
+                               prefWidth="251.0" promptText="Password"
+                               style="-fx-background-color: transparant; -fx-border-color: #5DFFAE; -fx-border-width: 0px 0px 2px 0px;"/>
+                <Text fill="#545454" layoutX="24.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      text="Welcome back" textAlignment="CENTER">
+                    <font>
+                        <Font name="Impact" size="24.0"/>
+                    </font>
+                </Text>
+                <Button layoutX="60.0" layoutY="319.0" mnemonicParsing="false" onAction="#validateLogin"
+                        prefHeight="38.0" prefWidth="251.0"
+                        style="-fx-background-color: #5DFFAE; -fx-border-width: 0px 0px 2px 0px;" text="Login"/>
+                <Hyperlink layoutX="175.0" layoutY="466.0" onAction="#registratieRedirect" text="Signup">
+                    <font>
+                        <Font name="System Bold" size="12.0"/>
+                    </font>
+                </Hyperlink>
+                <Text fill="#a3a3a3" layoutX="105.0" layoutY="482.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      text="No account?">
+                    <font>
+                        <Font name="System Bold" size="12.0"/>
+                    </font>
+                </Text>
+                <Hyperlink layoutX="175.0" layoutY="274.0" text="Forgot Your Password? "/>
+                <Text fill="#a3a3a3" layoutX="24.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      text="Sign in to continue" textAlignment="CENTER">
+                    <font>
+                        <Font name="Arial" size="12.0"/>
+                    </font>
+                </Text>
+                <ImageView fitHeight="73.0" fitWidth="79.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/logo2.jpg"/>
+                    </image>
+                </ImageView>
+                <Text fx:id="loginMessageLabel" fill="RED" layoutX="78.0" layoutY="310.0" strokeType="OUTSIDE"
+                      strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="215.25">
+                    <font>
+                        <Font name="Arial Bold" size="13.0"/>
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+    </right>
 </BorderPane>
