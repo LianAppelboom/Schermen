@@ -19,5 +19,8 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="mysql-connector-java-8.0.22" level="project" />
+    <orderEntry type="library" name="jSerialComm-2.6.2" level="project" />
+    <orderEntry type="library" name="mysql-connector-java-8.0.221" level="project" />
+    <orderEntry type="library" name="protobuf-java-3.11.4" level="project" />
   </component>
 </module>
