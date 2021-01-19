@@ -48,7 +48,6 @@ public class Controller implements Initializable {
 
             while (queryResult.next()) {
                 if (queryResult.getInt(1) == 1) {
-                    System.out.println(verifyLogin);
                     dashBoardRedirect();
                 } else {
                     validateLoginBeheerder();
@@ -83,6 +82,20 @@ public class Controller implements Initializable {
 
 
     private void dashBoardRedirect() throws Exception {
+        DatabaseConnection connectNow = new DatabaseConnection();
+        Connection connectionDB = connectNow.getConnection();
+        String verifyLogin = "SELECT fles_id FROM cooldown.gebruiker where emailadres = '" + loginTextField.getText() + "' AND wachtwoord = '" + passwordTextField.getText() + "'";
+        try {
+            Statement statement = connectionDB.createStatement();
+            ResultSet queryResult = statement.executeQuery(verifyLogin);
+            while (queryResult.next()) {
+                Data.text = queryResult.getString("fles_id");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            e.getCause();
+        }
+
         BorderPane root = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
         borderPane.getChildren().setAll(root);
     }

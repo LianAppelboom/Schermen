@@ -13,7 +13,7 @@
    <center>
       <SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="500.0" prefWidth="700.0" BorderPane.alignment="CENTER">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #5DFFAE;">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="189.0" prefWidth="698.0" style="-fx-background-color: #5DFFAE;">
                <children>
                   <BorderPane prefHeight="250.0" prefWidth="7.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="0.0" />
                   <BorderPane prefHeight="7.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF;" />
@@ -23,17 +23,17 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Button layoutX="535.0" layoutY="93.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 50%; -fx-background-color: green;" text="+" textFill="WHITE">
+                  <Button layoutX="535.0" layoutY="93.0" mnemonicParsing="false" onAction="#plusButtonAction" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 50%; -fx-background-color: green;" text="+" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button layoutX="535.0" layoutY="147.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 50%; -fx-background-color: red;" text="-" textFill="WHITE">
+                  <Button layoutX="535.0" layoutY="147.0" mnemonicParsing="false" onAction="#minusButtonAction" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 50%; -fx-background-color: red;" text="-" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
-                  <TextField alignment="CENTER" editable="false" layoutX="437.0" layoutY="108.0" prefHeight="54.0" prefWidth="69.0" style="-fx-background-color: #ECECEC; -fx-border-color: #C1C1C1; -fx-border-radius: 5;" text="2°C">
+                  <TextField fx:id="TemperatuurG" alignment="CENTER" editable="false" layoutX="422.0" layoutY="108.0" prefHeight="54.0" prefWidth="97.0" style="-fx-background-color: #ECECEC; -fx-border-color: #C1C1C1; -fx-border-radius: 5;">
                      <font>
                         <Font name="Impact" size="24.0" />
                      </font>
@@ -75,7 +75,7 @@
                         <Image url="@../image/circle2.jpg" />
                      </image>
                   </ImageView>
-                  <TextField alignment="CENTER" editable="false" layoutX="437.0" layoutY="68.0" prefHeight="85.0" prefWidth="89.0" style="-fx-background-color: transparant;" text="4°C">
+                  <TextField fx:id="Temperatuur" alignment="CENTER" editable="false" layoutX="437.0" layoutY="68.0" prefHeight="85.0" prefWidth="89.0" style="-fx-background-color: transparant;">
                      <font>
                         <Font name="Impact" size="24.0" />
                      </font>

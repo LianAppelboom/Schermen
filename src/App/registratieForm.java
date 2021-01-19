@@ -12,6 +12,7 @@ import javafx.scene.layout.BorderPane;
 
 import java.net.URL;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
@@ -71,16 +72,31 @@ public class registratieForm implements Initializable {
         try {
             Statement statement = connectDB.createStatement();
             statement.executeUpdate(insertToRegister);
-            noMatchLabel.setText("Geregistreerd!");
-
+            noMatchLabel.setText("Registered!");
+            flesConnectRedirect();
         }catch (Exception e){
             e.printStackTrace();
             e.getCause();
         }
     }
 
-    public void registrationMessage() {
-
+    private void flesConnectRedirect() throws Exception {
+        DatabaseConnection connectNow = new DatabaseConnection();
+        Connection connectionDB = connectNow.getConnection();
+        String verifyLogin = "SELECT gebruiker_id FROM cooldown.gebruiker where emailadres = '" + emailadresTextField.getText() + "' AND wachtwoord = '" + setPasswordField.getText() + "'";
+        try {
+            Statement statement = connectionDB.createStatement();
+            ResultSet queryResult = statement.executeQuery(verifyLogin);
+            while (queryResult.next()) {
+                Data.text = queryResult.getString("gebruiker_id");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            e.getCause();
+        }
+        BorderPane root = FXMLLoader.load(getClass().getResource("flesConnect.fxml"));
+        borderPane.getChildren().setAll(root);
+        Data.text = "";
     }
 
 

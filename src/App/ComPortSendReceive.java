@@ -22,12 +22,11 @@
  */
 
 
-package thechallenge;
+package App;
 
 import com.fazecast.jSerialComm.*;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+
 import java.util.Scanner;
 
 import static com.fazecast.jSerialComm.SerialPort.*;
@@ -37,7 +36,7 @@ public class ComPortSendReceive {
 
     public static SerialPort serialPort;
 
-    public static void main(String[] args) {
+    public static void main(String args) {
 
         String portName;
         SerialPort portNames[] = SerialPort.getCommPorts();
@@ -70,7 +69,7 @@ public class ComPortSendReceive {
             serialPort.setFlowControl(FLOW_CONTROL_DISABLED);
 
             // Schrijven naar seriële poort: schrijf string naar poort
-            String uitvoer = " nse rulez "; // de tekst die je naar de Microbit wilt sturen
+            String uitvoer = "Djelies"; // de tekst die je naar de Microbit wilt sturen
             byte[] buffer = uitvoer.getBytes();
             serialPort.writeBytes(buffer, uitvoer.length());
 
@@ -104,30 +103,20 @@ public class ComPortSendReceive {
                         // StringBuilder naar String converteren
                         String berichtData = bericht.toString();
 
-                        // tijdstip = nu
-                        String tijdstip = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+
 
                         // regeleindes verwijderen uit data en tijdstip
                         berichtData = berichtData.replace("\n", "").replace("\r", "");
-                        tijdstip = tijdstip.replace("\n", "").replace("\r", "");
+
 
                         // String naar float omzetten
                         Float temperatuur = Float.parseFloat(berichtData);
 
                         // afronden op 1 cijfer achter de komma
                         temperatuur = (float) (Math.round(temperatuur * 10.0) / 10.0);
-
-                        if (tijdstip.equals(vorigTijdstip)) {
-                            System.out.println("Regel uit buffer genegeerd:");
-                        } else {
-                            database.insert(temperatuur);  //Deze regel uitcommenten als SQL nog niet werkt.
-                        }
-
-                        System.out.print(tijdstip);
+                        database.insert(temperatuur);  //Deze regel uitcommenten als SQL nog niet werkt.
                         System.out.print("  ");
                         System.out.println(temperatuur);
-                        vorigTijdstip = tijdstip;
-
                         bericht.setLength(0);
                     } else {
                         bericht.append((char) b);

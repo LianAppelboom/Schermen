@@ -1,4 +1,4 @@
-package thechallenge;
+package App;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -30,16 +30,14 @@ public class InsertIntoSQL {
 
     /**
      * Insert a new row into the tbl1 table
+     *@param temperatuur
      *
-     * @param temperatuur
      */
     public void insert(float temperatuur) {
-        String tijdstip = "4";
-        String sql = "INSERT INTO fles(temperatuur, temperatuur_g) VALUES(?,?)";
+        String sql = "update cooldown.fles SET temperatuur = ? where fles_id = '"+ Data.text + "'";
         try {
             PreparedStatement preparedStatement = connect().prepareStatement(sql);
-            preparedStatement.setString(1, tijdstip);
-            preparedStatement.setFloat(2, temperatuur);
+            preparedStatement.setFloat(1, temperatuur);
             preparedStatement.executeUpdate();
         }
         catch (Exception e) {
